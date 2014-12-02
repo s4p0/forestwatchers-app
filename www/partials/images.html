@@ -1,0 +1,31 @@
+<div ng-controller="ImageCtrl">
+  <button type="button" class="btn btn-success btn-lg" ng-href="#" ng-click="takePicture()">Take a Picture</button>
+  <span>{{lastPictureInfo}}</span>
+
+<div class="container-fluid">
+
+<div style="height: 305px">
+    <carousel interval="carouselInterval">
+      <slide ng-repeat="photo in takenPhotos" active="slide.active">
+        <img ng-src="{{photo}}" style="margin:auto;">
+        <div class="carousel-caption">
+        some text
+          <!-- <h4>Slide {{$index}}</h4> -->
+          <!-- <p>{{slide.text}}</p> -->
+        </div>
+      </slide>
+    </carousel>
+</div>
+
+</div>
+
+
+<!-- <div ng-repeat="photo in takenPhotos"> -->
+  <!-- <div class="row"> -->
+    <!-- Photo. {{$index}} -->
+    <!-- <img ng-src="data:image/jpeg;base64,{{photo}}" alt="{{$index}}"></img> -->
+    <!-- <textarea  type="text" class="form-control" ng-value="{{photo}}" rows="5"></textarea> -->
+    <!-- <img ng-src="{{photo}}"></img> -->
+  <!-- </div> -->
+  <!-- <br> -->
+<!-- </div> -->

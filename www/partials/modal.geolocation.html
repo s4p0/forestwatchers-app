@@ -1,0 +1,50 @@
+<div class="modal-header">
+    <h3 class="modal-title">I'm a modal!</h3>
+</div>
+<div class="modal-body">
+
+    <table class="table table-bordered">
+        <tr>
+            <td> latitude </td>
+            <td> {{position.coords.latitude}} </td>
+        </tr>
+        <tr>
+            <td> longitude </td>
+            <td> {{position.coords.longitude}} </td>
+        </tr>
+        <tr>
+            <td> altitude </td>
+            <td> {{position.coords.altitude}} </td>
+        </tr>
+        <tr>
+            <td> accuracy </td>
+            <td> {{position.coords.accuracy}} </td>
+        </tr>
+        <tr>
+            <td> altitudeAccuracy </td>
+            <td> {{position.coords.altitudeAccuracy}} </td>
+        </tr>
+        <tr>
+            <td> heading </td>
+            <td> {{position.coords.heading}} </td>
+        </tr>
+        <tr>
+            <td> speed </td>
+            <td> {{position.coords.speed}} </td>
+        </tr>
+    </table>
+
+<div >
+        <div class="well well-lg" ng-click="isCollapsed = !isCollapsed">OPTIONS</div> 
+        <div collapse="isCollapsed">
+            <span>{{options}}"</span>
+            
+            <textarea ng-model="cameraResult" rows="20" ></textarea>
+        </div>
+    </div>
+
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">OK</button>
+    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+</div>
